@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 shadow p-3 mb-5 bg-danger rounded">
+            <h2>{{ person.name }}</h2>
+            <p>{{ person.email }}</p>
+            <p>{{ person.phone }}</p>
+            <p>{{ person.dob }}</p>
+            <p>Weight {{ person.weight }}</p>
+            <p>Height {{ person.height }}</p>
+            <p>{{ person.gender }}</p>
+            {% if person.profile_pic %}
+            	
+            {% endif %} 
+            <img width="300" src="{{ person.profile_pic.url }}" alt="">
+
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}
